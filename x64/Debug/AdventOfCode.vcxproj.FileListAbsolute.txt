@@ -1,0 +1,2 @@
+D:\AdventOfCode\x64\Debug\AdventOfCode.exe
+C:\Users\lucasmud\Documents\AdventOfCode\x64\Debug\AdventOfCode.exe

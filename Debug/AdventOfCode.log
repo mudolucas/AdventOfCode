@@ -1,0 +1,6 @@
+﻿  Day1.cpp
+D:\AdventOfCode\2021\Day1.cpp(8,20): warning C4018: '<': signed/unsigned mismatch
+  AdventOfCode.cpp
+  Reader.cpp
+  Generating Code...
+  AdventOfCode.vcxproj -> D:\AdventOfCode\Debug\AdventOfCode.exe
