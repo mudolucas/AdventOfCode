@@ -1,2 +1,4 @@
-﻿  Day5.cpp
+﻿  Day6.cpp
+C:\Users\lucasmud\Documents\AdventOfCode\2021\Day6.cpp(87,26): warning C4244: 'return': conversion from 'unsigned __int64' to 'int', possible loss of data
+C:\Users\lucasmud\Documents\AdventOfCode\2021\Day6.cpp(106,20): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'long', possible loss of data
   AdventOfCode.vcxproj -> C:\Users\lucasmud\Documents\AdventOfCode\x64\Debug\AdventOfCode.exe
