@@ -3,7 +3,7 @@
 #include <iostream>
 #include "utils/Reader.h"
 
-#define DAY Day6
+#define DAY Day7
 
 namespace DAY {
     extern void printAnswers();
