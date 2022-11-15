@@ -7,18 +7,18 @@ using namespace std;
 
 namespace DayTemplate {
 
-	int main1() {
+	int main1(string filename="2021/data/dayXX.txt") {
 
 		return 0;
 	}
 
-	int main2() {
+	int main2(string filename = "2021/data/dayXX.txt") {
 		return 0;
 	}
 
 	void test() {
 		int answer = 0;
-		int my_response = 0;
+		int my_response = main1("2021/data/dayXX-test.txt");
 		cout << "My response: " << my_response << "  Expected: " << answer << "\n\n";
 	}
 
