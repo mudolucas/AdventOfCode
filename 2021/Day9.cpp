@@ -62,35 +62,33 @@ namespace Day9 {
 			return to_string(i) + "." + to_string(j);
 		}
 
-		void findBasin(int i, int j, int& size, set<string>& considered) {
-			if (i + 1 <= 99 && grid[i+1][j] != 9 && considered.find(_str(i+1,j)) == considered.end()) {
-				size += 1;
-				considered.insert(_str(i + 1, j));
-				findBasin(i + 1, j, size, considered);
+		// Starting at the low point
+		// Recursevely look for elements that can be part of the current basin
+		// While keeping track of the points visited 
+		void findBasinMembers(int i, int j, set<string>& curr_basin) {
+			if (i + 1 <= 99 && grid[i+1][j] != 9 && curr_basin.find(_str(i+1,j)) == curr_basin.end()) {
+				curr_basin.insert(_str(i + 1, j));
+				findBasinMembers(i + 1, j, curr_basin);
 			}
-			if (i - 1 >= 0 && grid[i-1][j] != 9 && considered.find(_str(i - 1, j)) == considered.end()) {
-				size += 1;
-				considered.insert(_str(i - 1, j));
-				findBasin(i - 1, j, size, considered);
+			if (i - 1 >= 0 && grid[i-1][j] != 9 && curr_basin.find(_str(i - 1, j)) == curr_basin.end()) {
+				curr_basin.insert(_str(i - 1, j));
+				findBasinMembers(i - 1, j, curr_basin);
 			}
-			if (j + 1 <= 99 && grid[i][j+1] != 9 && considered.find(_str(i, j+1)) == considered.end()) {
-				size += 1;
-				considered.insert(_str(i, j+1));
-				findBasin(i, j+1, size, considered);
+			if (j + 1 <= 99 && grid[i][j+1] != 9 && curr_basin.find(_str(i, j+1)) == curr_basin.end()) {
+				curr_basin.insert(_str(i, j+1));
+				findBasinMembers(i, j+1, curr_basin);
 			}
-			if (j - 1 >= 0 && grid[i][j - 1] != 9 && considered.find(_str(i, j-1)) == considered.end()) {
-				size += 1;
-				considered.insert(_str(i, j-1));
-				findBasin(i, j-1, size, considered);
+			if (j - 1 >= 0 && grid[i][j - 1] != 9 && curr_basin.find(_str(i, j-1)) == curr_basin.end()) {
+				curr_basin.insert(_str(i, j-1));
+				findBasinMembers(i, j-1, curr_basin);
 			}
 
 		}
 
 		int getBasinSize(int i, int j) {
-			int size = 1;
-			set<string> considered = { _str(i,j) };
-			findBasin(i, j, size, considered);
-			return size;
+			set<string> curr_basin = { _str(i,j) };
+			findBasinMembers(i, j, curr_basin);
+			return curr_basin.size();
 		}
 
 		// Find all basins in the grid. 
@@ -110,7 +108,7 @@ namespace Day9 {
 			int len = sizes.size();
 			return sizes[len-1]*sizes[len-2]*sizes[len-3];
 		}
-	};
+	};// end struct
 
 	int main1(string filename = "2021/data/day9.txt") {
 		Tubes tubes(filename);
