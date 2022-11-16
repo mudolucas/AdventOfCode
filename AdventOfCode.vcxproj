@@ -146,6 +146,8 @@
     <ClCompile Include="2021\Day5.cpp" />
     <ClCompile Include="2021\Day6.cpp" />
     <ClCompile Include="2021\Day7.cpp" />
+    <ClCompile Include="2021\Day8.cpp" />
+    <ClCompile Include="2021\Day9.cpp" />
     <ClCompile Include="AdventOfCode.cpp" />
     <ClCompile Include="utils\Reader.cpp" />
   </ItemGroup>
