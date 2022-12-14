@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="2021\Day1.cpp" />
     <ClCompile Include="2021\Day10.cpp" />
+    <ClCompile Include="2021\Day11.cpp" />
     <ClCompile Include="2021\Day2.cpp" />
     <ClCompile Include="2021\Day3.cpp" />
     <ClCompile Include="2021\Day4.cpp" />
