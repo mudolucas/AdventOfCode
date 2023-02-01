@@ -15,7 +15,6 @@ namespace Day12 {
 	class Graph {
 	private:
 		vector<vector<string>> allValidPaths;
-		vector<int> smallCavesCount;
 		unordered_map<string, vector<string>> _graph;
 
 	public:
@@ -37,6 +36,8 @@ namespace Day12 {
 			}
 		}
 
+		// Find all possible paths from start -> end 
+		// traversing the graph in DFS fashion
 		void findAllPaths(string start, string end) {
 			vector<string> path;
 			path.push_back(start);
@@ -59,6 +60,7 @@ namespace Day12 {
 			}
 		}
 
+		// A lowercase node can be visit only once. Uppercase nodes can be re-visited 
 		bool _canVisitNode(string candidate, vector<string>& path) {
 			char ch = candidate[0];
 			// Check if it is lowercase
