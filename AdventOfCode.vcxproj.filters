@@ -60,6 +60,9 @@
     <ClCompile Include="2021\Day11.cpp">
       <Filter>Source Files\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\Day12.cpp">
+      <Filter>Source Files\2021</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils\Reader.h">
