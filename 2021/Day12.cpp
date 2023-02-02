@@ -5,7 +5,6 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
-#include <sstream>
 #include <cstring>
 
 using namespace std;
@@ -28,7 +27,6 @@ namespace Day12 {
 				while (!file.eof()) {
 					string line;
 					file >> line;
-					stringstream ss(line);
 					string start = line.substr(0, line.find("-"));
 					string end = line.substr(line.find("-") + 1);
 
